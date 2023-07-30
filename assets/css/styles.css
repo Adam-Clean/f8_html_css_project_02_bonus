@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1ebfc1;
+    --secondary-color: #def6f5;
+    --transition-delay: 0.2s;
+    --transition-effect: ease;
+    --course-item-gap: 47px;
+    --course-item-qty: 3;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
