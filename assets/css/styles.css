@@ -134,6 +134,23 @@ button {
     align-items: center;
 }
 
+.header .besnik {
+    display: flex;
+    align-items: center;
+}
+
+.header .besnik .logo {
+    margin-right: 6px;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header .besnik .brand-dot {
+    margin: 12px 0 0 4px;
+}
+
 .header .navbar {
     margin: 0 147px 0 auto;
     display: flex;
@@ -453,7 +470,7 @@ button {
 
 /* ====================================== Features ======================================= */
 .features {
-    padding: 200px 0 0;
+    padding: 200px 0 50px;
 }
 
 .features .body {
@@ -543,7 +560,7 @@ button {
 /* ====================================== Courses ======================================= */
 .courses {
     margin-top: 50px;
-    padding: 130px 0;
+    padding: 100px 0;
 }
 
 .courses .sub-title {
@@ -698,7 +715,7 @@ button {
 
 /* ====================================== Stats ======================================= */
 .stats {
-    padding: 150px 0;
+    padding: 120px 0;
 }
 
 .stats .stats-list {
@@ -920,6 +937,23 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 144px;
+}
+
+.footer .besnik {
+    display: flex;
+    align-items: center;
+}
+
+.footer .besnik .logo {
+    margin-right: 6px;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer .besnik .brand-dot {
+    margin: 12px 0 0 4px;
 }
 
 .footer .info:hover {
