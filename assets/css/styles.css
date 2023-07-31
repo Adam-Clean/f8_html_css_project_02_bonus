@@ -58,7 +58,7 @@ button {
     font-weight: 600;
     min-width: 108px;
     line-height: 48px;
-    border-radius: 6px;
+    border-radius: 14px;
     transition: var(--transition-delay) var(--transition-effect);
 }
 
@@ -262,6 +262,7 @@ button {
     border-radius: 50%;
     background: #fff;
     box-shadow: 0px 22px 50px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--primary-color);
 }
 
 .hero-info .hero-cta .play-btn:hover {
@@ -284,18 +285,27 @@ button {
     box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.05);
     width: 157px;
     transition: var(--transition-delay) var(--transition-effect);
+    border: 1px solid var(--primary-color);
 }
 
 .hero .modal-1:hover {
-    color: rgba(255, 130, 130, 1);
-    background: #f6ceec;
+    color: #fff;
+    background: var(--primary-color);
     cursor: pointer;
+    outline: 1px solid #fff;
+    outline-offset: -10px;
+}
+
+.hero .modal-1:hover .book-icon .white-line {
+    background: var(--primary-color);
 }
 
 .hero .modal-1 .book-icon {
     margin-right: 16px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     width: 36px;
     height: 40px;
     background: currentColor;
@@ -304,7 +314,7 @@ button {
 }
 
 .hero .modal-1 .book-icon .white-line {
-    margin-top: 28px;
+    /* margin-top: 28px; */
     width: 28px;
     height: 4px;
     background: #fff;
@@ -330,12 +340,19 @@ button {
     border-radius: 24px;
     box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.05);
     transition: var(--transition-delay) var(--transition-effect);
+    border: 1px solid var(--primary-color);
 }
 
 .hero .modal-2:hover {
-    color: rgba(251, 152, 153, 1);
-    background: #f6ceec;
+    color: #fff;
+    background: var(--primary-color);
     cursor: pointer;
+    outline: 1px solid #fff;
+    outline-offset: -10px;
+}
+
+.hero .modal-2:hover .note {
+    background: currentColor;
 }
 
 .hero .modal-2 .label {
@@ -398,12 +415,16 @@ button {
     background: #fefefd;
     color: var(--primary-color);
     box-shadow: 0px 12px 80px 0px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-delay) var(--transition-effect);
+    border: 1px solid var(--primary-color);
 }
 
 .hero .modal-3:hover {
-    color: rgba(251, 152, 153, 1);
-    background: #f6ceec;
+    color: #fff;
+    background: var(--primary-color);
     cursor: pointer;
+    outline: 1px solid #fff;
+    outline-offset: -10px;
 }
 
 .hero .modal-3 .label {
@@ -432,12 +453,12 @@ button {
 
 /* ====================================== Features ======================================= */
 .features {
-    padding: 130px 0 65px;
+    padding: 200px 0 0;
 }
 
 .features .body {
     margin-right: auto;
-    width: 1024px;
+    width: 1170px;
     max-width: 100%;
 }
 
@@ -468,15 +489,26 @@ button {
 
 .features-item {
     width: calc(100% / 3);
+    text-align: center;
 }
 
 .features-item .icon {
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    background: transparent;
+    background: #fff;
     cursor: pointer;
+    transition: var(--transition-delay) var(--transition-effect);
 }
 
-.features-item .icon.live-class:hover {
+.features-item .icon:hover {
+    color: #fff;
+    background: var(--primary-color);
+    outline: 1px solid #fff;
+    outline-offset: -10px;
+}
+
+/* .features-item .icon.live-class:hover {
     color: #ffc147;
 }
 
@@ -486,14 +518,17 @@ button {
 
 .features-item .icon.task:hover {
     color: #bf83ff;
-}
+} */
 
-.features-item .heading-lv4 {
-    margin-top: 26px;
+.features-item .heading-lv4-btn {
+    margin: 26px auto 0;
+    display: block;
+    background: transparent;
+    cursor: pointer;
 }
 
 .features-item .desc {
-    margin-top: 16px;
+    margin: 16px auto 0;
     width: 168px;
     color: #9da6a5;
     font-size: 1.6rem;
@@ -507,7 +542,8 @@ button {
 
 /* ====================================== Courses ======================================= */
 .courses {
-    padding: 65px 0;
+    margin-top: 50px;
+    padding: 130px 0;
 }
 
 .courses .sub-title {
@@ -533,7 +569,11 @@ button {
 }
 
 .courses-cta {
-    background: transparent;
+    width: 150px;
+    height: 50px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background: #fff;
     color: var(--primary-color);
     font-size: 1.4rem;
     font-weight: 700;
@@ -541,7 +581,8 @@ button {
 }
 
 .courses-cta:hover {
-    text-decoration: underline;
+    color: #fff;
+    background: var(--primary-color);
     cursor: pointer;
 }
 
@@ -559,11 +600,11 @@ button {
     border-radius: 8px;
 }
 
-.courses-list a:hover .glass {
+.courses-item:hover .glass {
     opacity: 0;
 }
 
-.course-item .thumb {
+.courses-item .thumb {
     width: 100%;
     height: 393px;
     object-fit: cover;
@@ -590,9 +631,21 @@ button {
     z-index: 2;
     padding: 18px 25px 29px;
     width: 90%;
-    border-radius: 8px;
+    border-radius: 20px;
     background: #fff;
     box-shadow: 0px 16px 90px 0px rgba(0, 0, 0, 0.05);
+}
+
+.courses-item:hover {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 10px;
+    border-radius: 8px;
+}
+
+.courses-item:hover .courses-info {
+    background: #fff;
+    outline: 2px solid var(--primary-color);
+    outline-offset: -10px;
 }
 
 .courses-info .fee {
@@ -645,7 +698,7 @@ button {
 
 /* ====================================== Stats ======================================= */
 .stats {
-    padding: 200px 0;
+    padding: 150px 0;
 }
 
 .stats .stats-list {
@@ -653,6 +706,11 @@ button {
     display: flex;
     justify-content: space-between;
     width: 74%;
+}
+
+.stats .stats-item {
+    background: transparent;
+    cursor: pointer;
 }
 
 .stats-item .value {
@@ -764,6 +822,7 @@ button {
 
 /* ======================== Feedback Media ======================== */
 .feedback-media {
+    margin-left: auto;
     position: relative;
     width: 64%;
 }
@@ -772,7 +831,6 @@ button {
     position: absolute;
     background: transparent;
     border: none;
-    cursor: pointer;
 }
 
 .feedback-media .avatar {
@@ -789,39 +847,148 @@ button {
 
 .feedback-media .student.active {
     top: 70px;
-    right: 171px;
+    right: 170px;
 }
 
 .feedback-media .student.s2 {
-    top: -18;
+    top: 80px;
     right: 0;
 }
 
 .feedback-media .student.s3 {
-    top: 337px;
-    right: 32px;
+    top: 350px;
+    right: 80px;
 }
 
 .feedback-media .student.s4 {
-    top: 366px;
-    right: 389px;
+    top: 350px;
+    right: 400px;
 }
 
 .feedback-media .student.s5 {
-    top: 221px;
-    right: 600px;
+    top: 80px;
+    right: 500px;
 }
 
 .feedback-media .student.s6 {
-    top: -37px;
-    right: 443px;
+    top: -80px;
+    right: 250px;
 }
 
 .feedback-media .student:hover:not(.active) {
     transform: translateX(15px) translateY(-15px);
+    cursor: pointer;
 }
 
 .feedback-media .student:hover:not(.active) .avatar {
     width: 110px;
     height: 110px;
+}
+
+/* ====================================== Admit ======================================= */
+.admit {
+    margin: 50px 0;
+    padding: 80px 0;
+    background: var(--secondary-color);
+}
+
+.admit .body {
+    display: flex;
+    align-items: center;
+}
+
+.admit .slogan .desc {
+    margin-top: 18px;
+    color: #767e7e;
+    font-size: 1.8rem;
+    line-height: normal;
+}
+
+.admit-btn {
+    margin-left: 410px;
+    width: 186px;
+    line-height: 68px;
+}
+
+/* ====================================== Footer ======================================= */
+.footer {
+    padding: 130px 0 50px;
+    position: relative;
+}
+
+.footer .body {
+    display: flex;
+    align-items: flex-start;
+    gap: 144px;
+}
+
+.footer .info:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.footer .title {
+    margin-bottom: 25px;
+    color: #2e2e2e;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer .column {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.footer .info {
+    margin-top: 20px;
+    color: #535353;
+    line-height: normal;
+}
+
+.footer .social {
+    display: flex;
+    gap: 9px;
+}
+
+.footer .copyright {
+    margin-top: 80px;
+    text-align: center;
+    color: #b0b5b4;
+    font-size: 1.8rem;
+    line-height: normal;
+}
+
+.footer .up-btn {
+    /* margin: 0 100px 100px auto; */
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    transform: translateY(25%);
+}
+
+.up-btn {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.up-btn svg {
+    transform: rotate(90deg);
+}
+
+.up-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
 }
